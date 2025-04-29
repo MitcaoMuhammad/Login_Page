@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--bg-gradient-start: #dbeafe;
+	--bg-gradient-end: #bfdbfe;
+	--white: #fff;
+	--light-gray: #f0f9ff;
+	--text-color: #1e3a8a;
+	--placeholder-color: #94a3b8;
+	--highlight-color: #1e40af;
+	--button-bg: #3b82f6;
+	--button-hover: #2563eb;
+	--button-bg-transparent: transparent;
+	--button-border: #1e40af;
+	--social-border: #93c5fd;
+	--toggle-bg-start: #60a5fa;
+	--toggle-bg-end: #3b82f6;
+	--box-shadow: rgba(59, 130, 246, 0.35);
+}
+
+body.dark {
+	--bg-gradient-start: #0f172a;
+	--bg-gradient-end: #1e293b;
+	--white: #1e293b;
+	--light-gray: #334155;
+	--text-color: #e2e8f0;
+	--placeholder-color: #94a3b8;
+	--highlight-color: #93c5fd;
+	--button-bg: #3b82f6;
+	--button-hover: #2563eb;
+	--button-border: #93c5fd;
+	--social-border: #475569;
+	--toggle-bg-start: #1d4ed8;
+	--toggle-bg-end: #1e40af;
+	--box-shadow: rgba(30, 58, 138, 0.45);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background: linear-gradient(
+		to right,
+		var(--bg-gradient-start),
+		var(--bg-gradient-end)
+	);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.toggle-container .toggle .toggle-panel .theme-toggle-btn-right {
+	position: absolute;
+	bottom: 91%;
+	right: 3%;
+	z-index: 1005;
+	outline: none;
+	border: none;
+	background: none;
+	width: 40px;
+	height: 40px;
+	font-size: 1.7rem;
+}
+.toggle-container .toggle .toggle-panel .theme-toggle-btn-left {
+	position: absolute;
+	bottom: 91%;
+	right: 84%;
+	z-index: 1005;
+	outline: none;
+	border: none;
+	background: none;
+	width: 40px;
+	height: 40px;
+	font-size: 1.7rem;
+}
+
+.form_group {
+	display: flex;
+	width: 100%;
+	gap: 6px;
+}
+
+form label {
+	position: relative;
+	width: 100%;
+	display: block;
+}
+
+form label input {
+	width: 100%;
+	padding: 10px 10px 20px 10px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+}
+
+form label input + span {
+	position: absolute;
+	top: 23px;
+	left: 10px;
+	color: var(--placeholder-color);
+	font-size: 0.9em;
+	cursor: text;
+	transition: 0.3s ease;
+}
+
+form label input:placeholder-shown + span {
+	top: 15px;
+	font-size: 0.9em;
+}
+
+form label input:focus + span,
+form label input:valid + span {
+	top: 35px;
+	font-size: 0.7em;
+	font-weight: 600;
+}
+
+form label input:valid + span {
+	color: var(--highlight-color);
+}
+
+form label .icon {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9;
+}
+
+.sign-in h1 {
+	margin-bottom: 20px;
+}
+
+.container {
+	background-color: var(--white);
+	border-radius: 30px;
+	box-shadow: 0 5px 15px var(--box-shadow);
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+	position: relative;
+	overflow: hidden;
+}
+
+.container p {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.3px;
+	margin: 20px 0;
+	color: var(--text-color);
+}
+
+.container h1 {
+	margin-bottom: 10px;
+	color: var(--text-color);
+}
+
+.container span {
+	font-size: 12px;
+	color: var(--text-color);
+}
+
+.container a {
+	color: var(--text-color);
+	font-size: 13px;
+	text-decoration: none;
+	margin: 15px 0 10px;
+}
+
+.container button {
+	background-color: var(--button-bg);
+	color: var(--white);
+	font-size: 12px;
+	padding: 10px 45px;
+	border: none;
+	border-radius: 8px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	margin-top: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+	background-color: var(--button-hover);
+}
+
+.container button.hidden {
+	background-color: var(--button-bg-transparent);
+	border: 1px solid var(--button-border);
+	color: var(--button-border);
+	transition: all 0.3s ease;
+}
+
+.container button.hidden:hover {
+	background-color: var(--button-border);
+	color: var(--white);
+}
+
+.container form {
+	background-color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	height: 100%;
+}
+
+.container input {
+	background-color: var(--light-gray);
+	margin: 8px 0;
+}
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+	left: 0;
+	z-index: 2;
+}
+
+.container.active .sign-in {
+	transform: translateX(100%);
+}
+
+.sign-up {
+	left: 0;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.active .sign-up {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: move 0.6s;
+}
+
+@keyframes move {
+	0%,
+	49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	50%,
+	100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.social-icons {
+	margin: 20px 0;
+}
+
+.social-icons a {
+	border: 1px solid var(--social-border);
+	border-radius: 20%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 3px;
+	width: 40px;
+	height: 40px;
+}
+
+.toggle-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 150px 0 0 100px;
+	transition: all 0.6s ease-in-out;
+	z-index: 1000;
+}
+
+.container.active .toggle-container {
+	transform: translateX(-100%);
+	border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+	background: linear-gradient(
+		to right,
+		var(--toggle-bg-start),
+		var(--toggle-bg-end)
+	);
+	color: var(--white);
+	position: relative;
+	left: -100%;
+	width: 200%;
+	height: 100%;
+	transform: translateX(0);
+	transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle {
+	transform: translateX(50%);
+}
+
+.toggle-panel {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 30px;
+	text-align: center;
+	top: 0;
+	transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+	transform: translateX(-200%);
+}
+
+.container.active .toggle-left {
+	transform: translateX(0);
+}
+
+.toggle-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.active .toggle-right {
+	transform: translateX(200%);
+}

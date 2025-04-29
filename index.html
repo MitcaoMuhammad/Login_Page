@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Page</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container" id="container">
+			<div class="form-container sign-up">
+				<form>
+					<h1>Create Account</h1>
+					<span>or use your email for registration</span>
+
+					<div class="form_group">
+						<label class="half">
+							<input type="text" id="firstname" required />
+							<span>Firstname</span>
+							<small id="firstname-error" style="color: red"></small>
+						</label>
+						<label class="half">
+							<input type="text" id="lastname" required />
+							<span>Lastname</span>
+							<small id="lastname-error" style="color: red"></small>
+						</label>
+					</div>
+					<label>
+						<input type="text" id="email" required />
+						<span>Email</span>
+						<small id="email-error" style="color: red"></small>
+					</label>
+					<label>
+						<input type="password" id="password" required />
+						<span>Password</span>
+						<span class="icon" id="togglePassword">
+							<i class="far fa-eye-slash"></i>
+						</span>
+						<small id="password-feedback" style="color: red"></small>
+					</label>
+					<label>
+						<input type="password" id="passwordConfirm" required />
+						<span>Confirm password</span>
+						<span class="icon" id="togglePasswordConfirm">
+							<i class="far fa-eye-slash"></i>
+						</span>
+						<small id="passwordConfirm-error" style="color: red"></small>
+					</label>
+
+					<button id="signUpBtn">Sign Up</button>
+				</form>
+			</div>
+
+			<div class="form-container sign-in">
+				<form>
+					<h1>Sign In</h1>
+
+					<span>or use your email and password</span>
+					<label>
+						<input type="text" id="emailSignIn" required />
+						<span>Email</span>
+						<small id="email-error-Sign-In" style="color: red"></small>
+					</label>
+					<label>
+						<input type="password" id="Sign_In_password" required />
+						<span>Password</span>
+						<span class="icon" id="Sign_In_togglePassword">
+							<i class="far fa-eye-slash"></i>
+						</span>
+					</label>
+
+					<a href="#">Forgot Your Password?</a>
+					<button>Sign In</button>
+				</form>
+			</div>
+
+			<div class="toggle-container">
+				<div class="toggle">
+					<div class="toggle-panel toggle-left">
+						<button id="themeToggleBtnleft" class="theme-toggle-btn-left">
+							🌙
+						</button>
+						<h1>Welcome Back!</h1>
+						<p>Enter your personal details to use all the site features</p>
+						<button class="hidden" id="login">Sign In</button>
+					</div>
+
+					<div class="toggle-panel toggle-right">
+						<button id="themeToggleBtnright" class="theme-toggle-btn-right">
+							🌙
+						</button>
+						<h1>Hello, Friend!</h1>
+						<p>
+							Register with your personal details to use all the site features
+						</p>
+						<button class="hidden" id="register">Sign Up</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
